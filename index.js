@@ -3,7 +3,6 @@ var vm = function () {
     localStorage.setItem('users', JSON.stringify([
     { id:1, username: 'bea', password: '888', firstName:"Beatriz",lastName:"Gonçalves",email:"bea@gmail.com",phoneNumber:999888777,Location:"Aveiro",profilePic:"https://scontent.fopo6-2.fna.fbcdn.net/v/t39.30808-6/469124318_9329400477083956_172519548269535657_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=-fWcjXFYxTQQ7kNvgHnzvg4&_nc_zt=23&_nc_ht=scontent.fopo6-2.fna&_nc_gid=ACJ-gt-Y5RuIPfSY8_1osxH&oh=00_AYBO28JBWCH85jg8H4sRWCSblk2tg0l10xm6Hte4O-l9dA&oe=6774A646",pets:[{id:"1",name:"Lucky",age:"7",type:"Dog",spec:"Chihuahua",fotos:["",""],sex:"Male", birthDay:"27/11/2017", microShipNum:1502,height:20,wheight:3.74,allergy:"",vacinations:[],vetVisits:[],reports:[],medications:[]},{id:"2",name:"Leonardo",age:"11",type:"Turtle",spec:"",fotos:["",""],sex:"Male", birthDay:"23/01/2013", microShipNum:2388,height:8,wheight:0.5,allergy:"",vacinations:[],vetVisits:[],reports:[],medications:[]}],purchaseHistory:[]},
     ]));
-
     self.users = JSON.parse(localStorage.getItem('users')) || [];
     self.currentUserId = ko.observable(0);
     self.userInfo = ko.observable(null);
