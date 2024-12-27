@@ -144,4 +144,7 @@ document.querySelectorAll(".form-check-input").forEach(checkbox => {
 $(document).ready(function () {
     window.viewModel = new vm(); 
     ko.applyBindings(window.viewModel);
+    
+    window.viewModel.updateCartCount(); 
+    window.viewModel.displayProducts(window.viewModel.products);
 });
