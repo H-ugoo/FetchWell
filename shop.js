@@ -76,11 +76,6 @@ function updateCartCount() {
     document.getElementById("cart-count").textContent = cart.length;
 }
 
-window.onload = function() {
-    updateCartCount();
-    displayProducts(products);
-};
-
 function displayProducts(productList) {
     productsContainer.innerHTML = "";
 
@@ -142,6 +137,8 @@ searchInput.addEventListener('input', filterProducts);
 document.querySelectorAll(".form-check-input").forEach(checkbox => {
     checkbox.addEventListener("change", filterProducts);
 });
+     updateCartCount();
+    displayProducts(products);
 };
 
 $(document).ready(function () {
