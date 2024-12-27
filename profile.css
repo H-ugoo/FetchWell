@@ -1,0 +1,15 @@
+#userProfile {
+    margin: 20px;
+    font-family: 'Roboto'
+}
+
+#userInfo {
+    margin-bottom: 20px;
+}
+
+.pet-info {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+

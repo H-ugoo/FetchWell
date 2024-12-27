@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FetchWell</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Jersey 25' rel='stylesheet'>
+    <link href="shop.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
+    <link rel="icon" href="Images/FetchWell_icon.png">
+</head>
+<body style="background-color: #F8F8F8;">
+    <nav class="navbar fixed-top navbar-expand-lg " style="background-color: #F8F8F8;">
+        <div class="container-fluid justify-content-between">
+            <div class="d-flex">
+                <div style="margin-top:10px">
+                <a class="navbar-brand" href="index.html" title="Paris 2024"><img src="images/FetchWell_icon.png" height="35" style="margin-bottom:10px;" /><span  style="font-family: 'Jersey 25';font-size: 26px; justify-content: center; margin-left: 10px;">FetchWell</span></a>
+                </div>
+            </div>
+            <ul class="navbar-nav flex-row d-none d-md-flex" style="justify-content:space-between">
+                <li class="nav-item me-3 me-lg-1">
+                    <a class="nav-link" href="index.html">
+                        <span class="cenas_do_menu" style="font-family: 'Jersey 25';font-size: 26px; justify-content: center; margin-left: 10px;    ">Home</span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <button class="btn dropdown-toggle nav-link" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="cenas_do_menu" style="font-family: 'Jersey 25';font-size: 26px; justify-content: center; margin-left: 10px;">Services <i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="petWalking.html">
+                            <b style="font-size: 24px;font-family: 'Jersey 25';color: #565556;">Pet Walking</b> 
+                        </a>
+                        <a class="dropdown-item" href="petSitting.html">
+                            <b style="font-size: 24px;font-family: 'Jersey 25';color: #565556;">Pet Sitting</b>
+                        </a>
+                        <a class="dropdown-item" href="petSpa.html">
+                            <b style="font-size: 24px;font-family: 'Jersey 25';color: #565556;">Pet Spa</b>
+                        </a>
+                        <a class="dropdown-item" href="veterinary.html">
+                            <b style="font-size: 24px;font-family: 'Jersey 25';color: #565556;">Veterinary</b>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item me-3 me-lg-1">
+                    <a class="nav-link" href="shop.html">
+                        <span class="cenas_do_menu" style="font-family: 'Jersey 25';font-size: 26px; justify-content: center; margin-left: 10px;">Shop</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav flex-row">
+                <!-- ko if: currentUserId() === 0 -->
+                <li class="nav-item me-3 me-lg-1">
+                    <a id="Login"class="nav-link d-sm-flex align-items-sm-center" href="login.html">
+                        <span class="d-none d-sm-block ms-1" style="font-family: 'Jersey 25';font-size: 26px; justify-content: center; margin-left: 10px;color: black;">Login</span>
+                        <img src="Images/profile.png" height="25" alt="profile" style="margin-left: 10px;">
+                    </a>
+                </li>
+                <!-- /ko -->
+                <!-- ko if: currentUserId() !==0 -->
+                <li class="nav-item me-3 me-lg-1">
+                    <a id="Login"class="nav-link d-sm-flex align-items-sm-center" href="profile.html">
+                        <span class="d-none d-sm-block ms-1" style="font-family: 'Jersey 25';font-size: 26px; justify-content: center; margin-left: 10px;color: black;" data-bind="text: userInfo()?.firstName">Login</span>
+                        <img src="Images/profile.png" height="25" alt="profile" style="margin-left: 10px;">
+                    </a>
+                </li>
+                <!-- /ko -->
+            </ul>
+        </div>
+    </nav>
+ 
+<div class="container" style="margin-top:100px;">
+    <div class="row" style="margin-bottom: 30px;">
+        <div class="col-4">
+            <div class="row">
+                <b style="font-family: 'Roboto'; color: #565556;font-size: 1.2vw;"> Filters</b>
+            </div>
+            <div class="row">
+                <div class="form-check col-2">
+                    <input class="form-check-input" type="checkbox" value="Dog" id="filter-dog">
+                    <label class="form-check-label" for="filter-dog">Dog</label>
+                </div>
+                <div class="form-check col-2">
+                    <input class="form-check-input" type="checkbox" value="Cat" id="filter-cat">
+                    <label class="form-check-label" for="filter-cat">Cat</label>
+                </div>
+                <div class="form-check col-3">
+                    <input class="form-check-input" type="checkbox" value="Health" id="filter-health">
+                    <label class="form-check-label" for="filter-health">Health</label>
+                </div>
+                <div class="form-check col-2">
+                    <input class="form-check-input" type="checkbox" value="Food" id="filter-food">
+                    <label class="form-check-label" for="filter-food">Food</label>
+                </div>
+                <div class="form-check col-2">
+                    <input class="form-check-input" type="checkbox" value="Toys" id="filter-toys">
+                    <label class="form-check-label" for="filter-toys">Toys</label>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="row">
+                <b style="font-family: 'Roboto'; color: #565556;font-size: 1.2vw;"> Search</b>
+            </div>
+            <div class="row">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Search...">
+                  </div>
+            </div>
+        </div>
+        <div class="col-4" style="display: grid;place-items: center;">
+            <a href="cart.html" >
+                <button class="ver_carrinho" style=" padding: 0.5rem 1rem;border-radius: 5px;cursor: pointer;font-size: 1.5vw;border: none;font-family: 'Roboto'; background-color: transparent;">
+                   See your cart  <i class="fa fa-shopping-cart"></i>    (<span id="cart-count">0</span>)
+                </button>
+            </a>
+        </div>
+    </div>
+    <main>
+        <div class="products-container" id="products-container">
+        </div>
+    </main>
+</div>
+<div class="row cena_de_baixo" style="margin:0; background-image: url(./Images/fundo.svg);">
+    <div class="container" style="margin-top:5rem ;">
+        <div class="row" style="justify-content: space-between;align-items: center;margin-left: 5rem; margin-right: 5rem;" >
+            <div class="col-4">
+                <h1 style="font-size:2vw;font-family: 'Roboto';color: white;">Subscribe to get <br>the last news about us</h1>
+                <p style="font-size:1vw;font-family: 'Roboto';color: white;">We recommended you to subscribe to our newspaper, <br>enter you email to get our daily update about us</p>
+            </div>
+            <div class="col-5">
+                <div class="input-group mb-3" style="padding: 1rem; background-color: white;border-radius: 6px;">
+                    <input type="text" class="form-control" placeholder="Enter you email address" aria-label="Enter you email address" aria-describedby="button-addon2" style="border: none;">
+                    <button class="btn butao_subscricao" style="border-radius:6px ; background-color: #FFB200;" type="button" id="button-addon2">Subscribe</button>
+                  </div>
+            </div>
+        </div>
+        <div class="row" style="margin:5rem;height:2px ; width: 92%; background-color: white;border-radius: 16px;"></div>
+        <div class="row" style="justify-content: space-between;align-items: center;margin-left: 5rem; margin-right: 5rem;"">
+            <div class="col-4">
+                <h1 style="font-size:2vw;font-family: 'Roboto';color: white;">PT. FETCHWELL</h1>
+                <p style="font-family: 'Roboto';color: white;"> &#169; 2024. All rights reserved</p>
+            </div>
+            <div class="col-4" style="font-size:1.1vw">
+                <a class="footer_stuf" href="aboutUs.html" style="color: white;"><b>About Us</b></a>
+                <a class="footer_stuf" href="partenership.html" style="color: white;margin-left: 2rem;margin-right: 2rem;"><b>Partnerships</b></a>
+                <a class="footer_stuf" href="privacy.html" style="color: white;"><b>Privacy Police</b></a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="shop.js"></script>
+</body>
+</html>

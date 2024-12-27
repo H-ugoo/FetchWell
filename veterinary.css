@@ -1,0 +1,38 @@
+.fundo{
+    background-image: url('./Images/veterinarioCao.png');    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+}
+.texto_detalhes_vet{
+    padding: 3rem;
+    margin-left: 2%;
+    width: 30%;
+    height: 70%;
+    background-color: #F8F8F8;
+    border-radius: 16px;
+}
+.butoem_book_now{
+    background-color: #FBB200;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1vw;
+    border-radius: 8px;
+    margin-top: 15%;
+
+}
+.butoem_book_now:hover{
+    transform: scale(1.05);
+}
+.texto_domeio{
+    font-family: 'Roboto';
+    font-size: 1.3vw;
+}
+.titulo_vet{
+    font-family: 'Roboto';
+    font-size: 2.3vw;
+    color:#FBB200
+}

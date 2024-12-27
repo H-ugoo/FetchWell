@@ -1,0 +1,48 @@
+.caes{
+    
+    height: 350px;
+    background-image: url('Images/flashing.png'); 
+    background-position: bottom center; 
+    background-repeat: no-repeat; 
+    background-size: contain; 
+    background-size: 100%;
+  }
+.produtos_do_carrinho{
+  font-size: 0.8vw;
+}
+.produtos_do_carrinho:hover{
+  transform: scale(1.05);
+}
+
+.butom_pagar:hover{
+  transform: scale(1.05);
+}
+
+.butom_voltar:hover{
+  color:#FFB200;
+  transform: scale(1.05);
+}
+
+.butom_pagar{
+  margin-bottom: 1rem;
+  width: 30%;
+  color: white;
+  background-color: #FFB200;
+  border: none;
+  font-family: 'Roboto';
+  font-size: 1.2rem;
+  border-radius: 8px;
+}
+.butom_voltar{
+  margin-bottom: 1rem;
+  width: 15%;
+  color: #565556;
+  background-color: transparent;
+  border: none;
+  font-family: 'Roboto';
+  font-size: 1.2rem;
+}
+.texto_conta{
+  font-family: 'Roboto';
+  font-size: 1.2rem;
+}

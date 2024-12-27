@@ -1,0 +1,116 @@
+.fundo{
+    background-image: url('./Images/vet2.png');
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-content: center;
+}
+.texto_detalhes_vetBook{
+    margin-top: 5%;
+    padding: 2rem;
+    margin-left: 2%;
+    width: 30%;
+    height: 80%;
+    background-color: #F8F8F8;
+    border-radius: 16px;
+}
+.butoem_book_nowBook{
+    background-color: #FBB200;
+    color: white;
+    border: 0px;
+    padding: 1rem;
+    font-size: 1vw;
+    border-radius: 16px;
+    margin-top: 10%;
+}
+.butoem_book_nowBook:hover{
+    transform: scale(1.05);
+}
+.texto_domeio{
+    font-family: 'Roboto';
+    font-size: 1.3vw;
+}
+.titulo_vetBook{
+    font-family: 'Roboto';
+    font-size: 2.0vw;
+
+}
+
+.error {
+    color: red;
+    font-size: 0.9vw;
+}
+
+.custom-radio {
+    display: inline-block;
+    width: 28%;
+    height: 10%;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: 'Roboto';
+    font-size: 1vw;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-radio input[type="radio"] {
+    display: none;
+}
+
+.custom-radio.selected {
+    background-color:#FBB200;
+    color: white;
+    border-color: #FBB200;
+}
+
+.custom-radio:hover {
+    border-color: #FBB200;
+    background-color: #FBB200;
+    color: white;
+    transform: scale(1.05);
+}
+
+.modalBook {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    text-align: center;
+}
+
+.modalBook.show {
+    display: block;
+}
+
+.modalBook button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FBB200;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+
+.modalBook button:hover {
+    background-color: #FBB200;
+    transform: scale(1.05);
+}
+.inputboxmail{
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    width: 90%;
+}

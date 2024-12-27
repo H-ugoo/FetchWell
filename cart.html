@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FetchWell</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Jersey 25' rel='stylesheet'>
+    <link href="cart.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
+    <link rel="icon" href="Images/FetchWell_icon.png">
+</head>
+<body style="background-color: #F8F8F8;">
+    <nav class="navbar fixed-top navbar-expand-lg " style="background-color: #F8F8F8;">
+        <div class="container-fluid justify-content-between">
+            <div class="d-flex">
+                <div style="margin-top:10px">
+                <a class="navbar-brand" href="index.html" title="Paris 2024"><img src="images/FetchWell_icon.png" height="35" style="margin-bottom:10px;" /><span  style="font-family: 'Jersey 25';font-size: 26px; justify-content: center; margin-left: 10px;">FetchWell</span></a>
+                </div>
+            </div>
+            <ul class="navbar-nav flex-row d-none d-md-flex" style="justify-content:space-between">
+                <li class="nav-item me-3 me-lg-1">
+                    <a class="nav-link" href="index.html">
+                        <span class="cenas_do_menu" style="font-family: 'Jersey 25';font-size: 26px; justify-content: center; margin-left: 10px;    ">Home</span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <button class="btn dropdown-toggle nav-link" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="cenas_do_menu" style="font-family: 'Jersey 25';font-size: 26px; justify-content: center; margin-left: 10px;">Services <i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="petWalking.html">
+                            <b style="font-size: 24px;font-family: 'Jersey 25';color: #565556;">Pet Walking</b> 
+                        </a>
+                        <a class="dropdown-item" href="petSitting.html">
+                            <b style="font-size: 24px;font-family: 'Jersey 25';color: #565556;">Pet Sitting</b>
+                        </a>
+                        <a class="dropdown-item" href="petSpa.html">
+                            <b style="font-size: 24px;font-family: 'Jersey 25';color: #565556;">Pet Spa</b>
+                        </a>
+                        <a class="dropdown-item" href="veterinary.html">
+                            <b style="font-size: 24px;font-family: 'Jersey 25';color: #565556;">Veterinary</b>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item me-3 me-lg-1">
+                    <a class="nav-link" href="shop.html">
+                        <span class="cenas_do_menu" style="font-family: 'Jersey 25';font-size: 26px; justify-content: center; margin-left: 10px;">Shop</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav flex-row">
+                <!-- ko if: currentUserId() === 0 -->
+                <li class="nav-item me-3 me-lg-1">
+                  <a id="Login"class="nav-link d-sm-flex align-items-sm-center" href="login.html">
+                      <span class="d-none d-sm-block ms-1" style="font-family: 'Jersey 25';font-size: 26px; justify-content: center; margin-left: 10px;color: black;">Login</span>
+                      <img src="Images/profile.png" height="25" alt="profile" style="margin-left: 10px;">
+                  </a>
+              </li>
+              <!-- /ko -->
+              <!-- ko if: currentUserId() !==0 -->
+              <li class="nav-item me-3 me-lg-1">
+                  <a id="Login"class="nav-link d-sm-flex align-items-sm-center" href="profile.html">
+                      <span class="d-none d-sm-block ms-1" style="font-family: 'Jersey 25';font-size: 26px; justify-content: center; margin-left: 10px;color: black;" data-bind="text: userInfo()?.firstName">Login</span>
+                      <img src="Images/profile.png" height="25" alt="profile" style="margin-left: 10px;">
+                  </a>
+              </li>
+              <!-- /ko -->
+            </ul>
+        </div>
+    </nav>
+
+    <main style="margin-top: 8%;">
+        <div class="container">
+            <div class="row" style="text-align: end;">
+                <a href="shop.html" class="cart-link">
+                    <button  class="butom_voltar" style="padding: 0.5rem 1rem;">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to Store 
+                    </button>
+                </a>
+            </div>
+            <div class="row">
+            <div class="col-6">
+                <div class="row" style="text-align: center;">
+                    <b style="font-family: 'Roboto'; font-size: 2vw;">Check Out</b>
+                </div>
+                <div class="container border rounded">
+                <form id="checkoutForm">
+                    <div class="mb-3" style="margin-top: 1rem;">
+                      <label for="fullName" class="form-label">Full Name</label>
+                      <input type="text" class="form-control" id="fullName" placeholder="Your Full Name...">
+                      <div class="invalid-feedback">Full Name must have at least 2 words.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="address" class="form-label">Address</label>
+                      <input type="text" class="form-control" id="address" placeholder="Your address...">
+                      <div class="invalid-feedback">Address must have at least 2 words.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="Your Email...">
+                      <div class="invalid-feedback">Exemple of a valid email: exemplo@dominio.com</div>
+                    </div>
+                  
+                    <div class="mb-3">
+                      <label class="form-label">Payment Method</label>
+                      <div>
+                        <input type="radio" name="paymentMethod" id="visa" value="visa">
+                        <label for="visa">Visa</label>
+                      </div>
+                      <div>
+                        <input type="radio" name="paymentMethod" id="mastercard" value="mastercard">
+                        <label for="mastercard">MasterCard</label>
+                      </div>
+                      <div>
+                        <input type="radio" name="paymentMethod" id="paypal" value="paypal">
+                        <label for="paypal">PayPal</label>
+                      </div>
+                      <div class="invalid-feedback" id="paymentError" style="display: none;">Select one payment method.</div>
+                    </div>
+                  
+                    <div id="cardDetails" style="display: none;">
+                      <div class="mb-3">
+                        <label for="cardName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="cardName" placeholder="Card Name...">
+                        <div class="invalid-feedback">Name must have at least 2 words.</div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="cardNumber" class="form-label">Card Number</label>
+                        <input type="text" class="form-control" id="cardNumber" placeholder="Card Number...">
+                        <div class="invalid-feedback">Only numbers.</div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="expiryDate" class="form-label">Expiry Date</label>
+                        <input type="text" class="form-control" id="expiryDate" placeholder="MM/AA">
+                        <div class="invalid-feedback">Expiry Date format: MM/AA.</div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="cvc" class="form-label">CVC</label>
+                        <input type="text" class="form-control" id="cvc" placeholder="CVC...">
+                        <div class="invalid-feedback">CVC must have 3 numbers.</div>
+                      </div>
+                    </div>
+                  
+                    <div id="paypalDetails" style="display: none;">
+                      <div class="mb-3">
+                        <label for="paypalPhone" class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" id="paypalPhone" placeholder="Phone Number...">
+                        <div class="invalid-feedback">Phone Number must have 9 numbers.</div>
+                      </div>
+                    </div>
+                  <div class="row" style="justify-content: center;">
+                      <button type="submit" class="butom_pagar">Pay Now</button>
+                  </div>
+                  </form>
+                </div>
+                  
+                  <div class="modal" tabindex="-1" id="successModal" style="display: none;">
+                    <div class="modal-dialog">
+                      <div class="modal-content"style="text-align: center;">
+                        <div class="modal-header" style="text-align: center; justify-content: center;">
+                          <h5 class="modal-title" style="font-family: 'Roboto';font-size: 1.8rem;">Purchase Completed!</h5>
+                        </div>
+                        <div class="modal-body" style="text-align: center; font-size: 1.5rem;">
+                          <div class="row">
+                              <p style="font-family: 'Roboto';color:green">Transaction<br>Successful</p>
+                              <br>
+                              <i class="fa fa-check" style="color:green; " aria-hidden="true"></i>
+                              <br>
+                          </div>
+                          <div class="row">
+                            <p style="font-family: 'Roboto'"><br>Thank You For Your Purchase! <br> Your order was completed successfully.<br>We have sent an email as proof of delivery. The email will provide purchase details.</p>
+                          </div>
+                        </div>
+                        <div class="modal-footer" style="justify-content: center;">
+                          <button type="button" class="btn btn-primary" style="width: 30%;color:white;background-color: #FBB200;border-color: #FBB200;" id="redirectBtn"><b>Ok</b></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="col-6">
+                    <div class="row" id="cart-container">
+                    </div>
+                    <hr>
+                    <div class="row" style="justify-content: space-between;">
+                        <div class="col-6" style="text-align: center;">
+                            <div class="texto_conta" data-bind="text: 'Quantity: ' + totalQuant()">
+                            </div>
+                        </div>
+                        <div class="col-6" style="text-align: center;">
+                            <div class="texto_conta" data-bind="text: 'Total Price: ' + totalPrice().toFixed(2) + ' €'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </main>
+</div>
+<div class="caes"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="cart.js"></script>
+    </body>
+    </html>
+    

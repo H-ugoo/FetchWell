@@ -1,0 +1,153 @@
+.dropdown-toggle::after {
+    display: none;
+}
+.dropdown-item:hover{
+    background-color: rgba(255, 178, 0, 0.1)
+  }
+.cenas_do_menu{
+    color: #565556
+}
+.cenas_do_menu:hover{
+    color: #FFB200;
+    text-decoration: underline;
+}
+#Login:hover{
+    text-decoration: underline;
+}
+
+.Texto{ 
+    grid-column-start:1;
+    grid-column-end:5;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    z-index: 3;
+    border-radius: 16px;
+}
+.cao{
+    grid-column-start: 6;
+    grid-column-end: 9;
+    grid-row-start:4;
+    grid-row-end:9;
+    margin: 50px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    transform: rotate(0.01turn);
+}
+.Foto_Casal{
+    grid-column-start:4;
+    grid-column-end:9 ;
+    grid-row-start: 1;
+    grid-row-end: 7;
+    z-index: 1;
+    background-position: center;
+    background-size: cover;
+    border-radius: 16px;
+}
+.see_more{
+    margin-left: 15px;
+
+    color: white;
+    border: none;
+    background-color: #FFB200;
+    border-radius: 6px;
+    padding: 10px;
+    font-family: 'Roboto';
+    text-decoration: bold;
+}
+.see_more:hover{
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+.carousel-item{ 
+    height: 564px;
+    border-radius:8px ;
+    position: relative;
+    background-color: black;
+}
+.overlay-image{
+    position:absolute;
+    border-radius:8px ;
+    bottom:0;
+    left:0;
+    right:0;
+    top:0;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.9;
+}
+.butao_de_lermais{
+    color:#4B4B4B;
+}
+.butao_de_lermais:hover{
+    transform: scale(1.05);
+    color: #FFB200;
+    text-decoration: underline;
+}
+.products-container {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 5rem;
+}
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+.product:hover {
+    transform: scale(1.05);
+}
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.product h3 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem;
+}
+.product h5 {
+    color:#4B4B4B;
+    font-size: 0.9rem;
+}
+.preco {
+    border-radius: 16px;
+    text-align: center;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: white;
+    background-color: #FFB200;
+}
+.product button {
+    background-color: #FFB200;
+    color: white;
+    border: none;
+    border-radius: 360px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+.product button:hover {
+    transform: scale(1.3);
+}
+.cena_de_baixo{
+    width: 100%;
+    background-color: #FFB200;
+}
+.butao_subscricao:hover{
+    transform: scale(1.05);
+}
+.footer_stuf{
+    text-decoration: none;
+}
+.footer_stuf:hover{
+    text-decoration: underline;
+}

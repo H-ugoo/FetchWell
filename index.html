@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FetchWell</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Jersey 25' rel='stylesheet'>
+    <link href="index.css" rel="stylesheet" />
+    <link rel="icon" href="Images/FetchWell_icon.png">
+</head>
+<body style="background-color: #F8F8F8;">
+    <nav class="navbar fixed-top navbar-expand-lg " style="background-color: #F8F8F8;">
+        <div class="container-fluid justify-content-between">
+            <div class="d-flex">
+                <div style="margin-top:10px">
+                <a class="navbar-brand" href="index.html" title="Paris 2024"><img src="images/FetchWell_icon.png" height="35" style="margin-bottom:10px;" /><span  style="font-family: 'Jersey 25';font-size: 26px; justify-content: center; margin-left: 10px;">FetchWell</span></a>
+                </div>
+            </div>
+            <ul class="navbar-nav flex-row d-none d-md-flex" style="justify-content:space-between">
+                <li class="nav-item me-3 me-lg-1">
+                    <a class="nav-link" href="index.html">
+                        <span class="cenas_do_menu" style="font-family: 'Jersey 25';font-size: 26px; justify-content: center; margin-left: 10px;    ">Home</span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <button class="btn dropdown-toggle nav-link" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="cenas_do_menu" style="font-family: 'Jersey 25';font-size: 26px; justify-content: center; margin-left: 10px;">Services <i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="petWalking.html">
+                            <b style="font-size: 24px;font-family: 'Jersey 25';color: #565556;">Pet Walking</b> 
+                        </a>
+                        <a class="dropdown-item" href="petSitting.html">
+                            <b style="font-size: 24px;font-family: 'Jersey 25';color: #565556;">Pet Sitting</b>
+                        </a>
+                        <a class="dropdown-item" href="petSpa.html">
+                            <b style="font-size: 24px;font-family: 'Jersey 25';color: #565556;">Pet Spa</b>
+                        </a>
+                        <a class="dropdown-item" href="veterinary.html">
+                            <b style="font-size: 24px;font-family: 'Jersey 25';color: #565556;">Veterinary</b>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item me-3 me-lg-1">
+                    <a class="nav-link" href="shop.html">
+                        <span class="cenas_do_menu" style="font-family: 'Jersey 25';font-size: 26px; justify-content: center; margin-left: 10px;">Shop</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav flex-row">
+                <!-- ko if: currentUserId() === 0 -->
+                <li class="nav-item me-3 me-lg-1">
+                    <a id="Login"class="nav-link d-sm-flex align-items-sm-center" href="login.html">
+                        <span class="d-none d-sm-block ms-1" style="font-family: 'Jersey 25';font-size: 26px; justify-content: center; margin-left: 10px;color: black;">Login</span>
+                        <img src="Images/profile.png" height="25" alt="profile" style="margin-left: 10px;">
+                    </a>
+                </li>
+                <!-- /ko -->
+                <!-- ko if: currentUserId() !==0 -->
+                <li class="nav-item me-3 me-lg-1">
+                    <a id="Login"class="nav-link d-sm-flex align-items-sm-center" href="profile.html">
+                        <span class="d-none d-sm-block ms-1" style="font-family: 'Jersey 25';font-size: 26px; justify-content: center; margin-left: 10px;color: black;" data-bind="text: userInfo()?.firstName">Login</span>
+                        <img src="Images/profile.png" height="25" alt="profile" style="margin-left: 10px;">
+                    </a>
+                </li>
+                <!-- /ko -->
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="container" style="height: 43rem;margin-top:130px; display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;" id="parent1">
+                <div style="background-image: url(./Images/cute-couple-have-rest-summer-forest.jpg);"class="Foto_Casal"></div>
+                <div style="background-image: url(./Images/cao1.png);"class="cao"></div>
+                <div class="Texto" style="background-color: rgba(255, 255, 255, 0.9);">
+                    <h1 style="color: #FFB200;font-size:3vw;margin:30px;">Help You Keep Your <br>Pets Active And Happy</h1>
+                    <p style="font-family: 'Roboto';color: #4B4B4B;font-size: 18px;margin: 30px;">We're dedicated to helping your pets stay healthy, active and <br>full of energy. Our services are designed to ensure your furry friend enjoys every moment of play, while you relax knowing you’re giving them the best care.</p>
+                    <a href="petWalking.html" class="btn"><button class="see_more">See Our Services</button></a>
+                </div>
+        </div>
+        <div class="row" ">
+            <div class="container">
+                <div class="row">
+                    <p style="text-align: center; font-family: 'Roboto';color: #4B4B4B;font-size: 20px;">Some of our partners</p>
+                </div>
+                <div class="row" style="justify-content: space-around;align-items: center; margin-right: 3%; opacity: 0.6;">
+                    <div class="col-1">
+                        <img src="Images/purina.png" style="max-width:200%;" alt="Purina">
+                    </div>
+                    <div class="col-1">
+                        <img src="Images/royalcanin.png" style="max-width: 200%;" alt="Purina">
+                    </div>
+                    <div class="col-1">
+                        <img src="Images/fidelidadepet.png" style="max-width: 200%;" alt="Purina">
+                    </div>
+                    <div class="col-1">
+                        <img src="Images/petTECH.png" style="max-width: 200%;" alt="Purina">
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="container" style="margin-top: 3%;">
+            <div class="row">
+                <div class="col-6">
+                    <b style="font-family: 'Roboto';color: #4B4B4B;font-size: 28px;">Some of the services that we <br>provide for you</b>
+                    <br>
+                    <div id="carouselExample" class="carousel slide" style="margin-top: 20px;">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <div class="overlay-image" style="background-image: url(./Images/Gato-com-peitorial-e-trela.jpeg);"></div>  
+                          </div>
+                          <div class="carousel-item">
+                            <div class="overlay-image" style="background-image: url(./Images/healthcare2.png);" ></div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="overlay-image" style="background-image: url(./Images/petsitting2.png);" ></div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="overlay-image" style="background-image: url(./Images/petspa2.png);" ></div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>
+                <div class="col-6">
+                    <div class="row" style="margin-left: 30px;margin-bottom:30px;margin-right: 30px;height: 200px;">
+                        <div class="col-5" style="background-image: url(./Images/cao1vacina.jpeg); background-position: center;background-size: cover; border-radius:8px ;"></div>
+                        <div class="col-7"> 
+                            <b style="font-family: 'Roboto';color: #4B4B4B;font-size: 24px;">Health Care</b>
+                            <br>
+                            <p style="font-family: 'Roboto'">We offer a variety of services and wellness packages to make sure your pet remains healthy.</p>
+                            <br>
+                            <a href="veterinary.html"><button class="butao_de_lermais" style="border: none; background-color:transparent;">Read More <i class="fa fas fa-chevron-right" style="color: #FFB200;" aria-hidden="true"></i></button></a>
+                        </div>
+                    </div>
+                    <div class="row" style="margin: 30px;height: 200px;">
+                        <div class="col-5" style="background-image: url(./Images/bacana_com_o_cao.png); background-position: center;background-size: cover; border-radius:8px ;"></div>
+                        <div class="col-7"> 
+                            <b style="font-family: 'Roboto';color: #4B4B4B;font-size: 24px;">Pet Sitting</b>
+                            <br>
+                            <p style="font-family: 'Roboto'">Find a verified and reviewed sitter who’ll keep your pets company and give them all the time, care and attention in the world.</p>
+                            <br>
+                            <a href="petSitting.html"><button class="butao_de_lermais" style="border: none; background-color:transparent;">Read More <i class="fa fas fa-chevron-right" style="color: #FFB200;" aria-hidden="true"></i></button></a>
+                        </div>
+                    </div>
+                    <div class="row" style="margin: 30px;height: 200px;">
+                        <div class="col-5" style="background-image: url(./Images/cao_banho.png);background-position: center;background-size: cover; border-radius:8px ;"></div>
+                        <div class="col-7">
+                            <b style="font-family: 'Roboto';color: #4B4B4B;font-size: 24px;">Pet Spa</b>
+                            <br>
+                            <p style="font-family: 'Roboto'">Our pet spa and wellness services feature advanced bathing technology to support a healthy and happy lifestyle.</p>
+                            <br>
+                            <a href="petSpa.html"><button class="butao_de_lermais" style="border: none; background-color:transparent;">Read More <i class="fa fas fa-chevron-right" style="color: #FFB200;" aria-hidden="true"></i></button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-between" style="margin-top: 5rem;">
+            <div class="col-6">
+                <b style="font-family: 'Roboto';color: #4B4B4B;font-size: 24px;">Products</b> 
+            </div>
+            <div class="col-2">
+                <a href="shop.html"><button class="butao_de_lermais" style="font-size:1vw;border: none; background-color:transparent;">See All <i class="fa fas fa-chevron-right" style="color: #FFB200;" aria-hidden="true"></i></button></a>
+            </div>
+        </div>    
+        <div class="row" style="margin-top: 5rem ;">
+            <p style="font-family: 'Roboto';color:#4B4B4B">Our best sellers...</p>
+        </div>
+        <div class="products-container" id="products-container">
+        </div>
+    </div>
+    <div class="row cena_de_baixo" style="margin:0; background-image: url(./Images/fundo.svg);">
+        <div class="container" style="margin-top:5rem ;">
+            <div class="row" style="justify-content: space-between;align-items: center;margin-left: 5rem; margin-right: 5rem;" >
+                <div class="col-4">
+                    <h1 style="font-size:2vw;font-family: 'Roboto';color: white;">Subscribe to get <br>the last news about us</h1>
+                    <p style="font-size:1vw;font-family: 'Roboto';color: white;">We recommended you to subscribe to our newspaper, <br>enter you email to get our daily update about us</p>
+                </div>
+                <div class="col-5">
+                    <div class="input-group mb-3" style="padding: 1rem; background-color: white;border-radius: 6px;">
+                        <input type="text" class="form-control" placeholder="Enter you email address" aria-label="Enter you email address" aria-describedby="button-addon2" style="border: none;">
+                        <button class="btn butao_subscricao" style="border-radius:6px ; background-color: #FFB200;" type="button" id="button-addon2">Subscribe</button>
+                      </div>
+                </div>
+            </div>
+            <div class="row" style="margin:5rem;height:2px ; width: 92%; background-color: white;border-radius: 16px;"></div>
+            <div class="row" style="justify-content: space-between;align-items: center;margin-left: 5rem; margin-right: 5rem;"">
+                <div class="col-4">
+                    <h1 style="font-size:2vw;font-family: 'Roboto';color: white;">PT. FETCHWELL</h1>
+                    <p style="font-family: 'Roboto';color: white;"> &#169; 2024. All rights reserved</p>
+                </div>
+                <div class="col-4" style="font-size:1.1vw">
+                    <a class="footer_stuf" href="aboutUs.html" style="color: white;"><b>About Us</b></a>
+                    <a class="footer_stuf" href="partenership.html" style="color: white;margin-left: 2rem;margin-right: 2rem;"><b>Partnerships</b></a>
+                    <a class="footer_stuf" href="privacy.html" style="color: white;"><b>Privacy Police</b></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
