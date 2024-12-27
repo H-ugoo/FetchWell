@@ -169,7 +169,7 @@ self.loadCurrentUser();
         });
 
         document.getElementById('expiryDate').addEventListener('input', function () {
-            validateField(this, /^\d{2}\/\d{2}/, 'Expiry Date format: MM/AA.');
+            validateField(this, /^\d{2}\/\d{2}/, 'Expiry Date format: MM/YY.');
         });
 
         document.getElementById('cvc').addEventListener('input', function () {
@@ -204,7 +204,7 @@ self.loadCurrentUser();
             if (paymentMethod.value === 'visa' || paymentMethod.value === 'mastercard') {
                 isValid &= validateField(document.getElementById('cardName'), /^\w+ \w+$/, 'Name must have at least 2 words.');
                 isValid &= validateField(document.getElementById('cardNumber'), /^\d+$/, 'Only numbers.');
-                isValid &= validateField(document.getElementById('expiryDate'), /^\d{2}\/\d{2}\, 'Expiry Date format: MM/YY.');
+                isValid &= validateField(document.getElementById('expiryDate'), /^\d{2}\/\d{2}/, 'Expiry Date format: MM/YY.');
                 isValid &= validateField(document.getElementById('cvc'), /^\d{3}$/, 'CVC must have 3 numbers.');
             } else if (paymentMethod.value === 'paypal') {
                 isValid &= validateField(document.getElementById('paypalPhone'), /^\d{9}$/, 'Phone Number must have 9 numbers.');
